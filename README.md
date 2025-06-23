@@ -15,7 +15,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Live site URL here]([https://ttyn08.github.io/NFT-preview-card-component-FM/])
+- Live Site URL: [Live site URL here](https://ttyn08.github.io/NFT-preview-card-component-FM/)
 
 
 ### Built with
