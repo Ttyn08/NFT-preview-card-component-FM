@@ -1,0 +1,164 @@
+/* Add to your main CSS file, e.g., styles.css */
+:root {
+    --blue-500: hsl(215, 51%, 70%);
+    --cyan-400: hsl(178, 100%, 50%);
+    --blue-950: hsl(217, 54%, 11%);
+    --blue-900: hsl(216, 50%, 16%);
+    --blue-800: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+    --font-size-paragraph: 18px;
+
+    --font-family-base: 'Outfit', sans-serif;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-semibold: 600;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-paragraph);
+    color: var(--blue-500);
+    background-color: var(--blue-950);
+    line-height: 1.5;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    padding-block-start: 2rem;
+    padding-block-end: 2rem;
+    padding-inline: 1rem;
+}
+
+section{
+    min-width: 18.75rem;
+    background-color: var(--blue-900);
+    border-radius: 1rem;
+    padding: 1.4rem;
+}
+
+.section-img{
+    position: relative;
+    width: 100%;
+    height: 17.5rem;
+    border-radius: 0.625rem;
+    overflow: hidden;
+}
+
+.section-img img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-img-overlay {
+    position: absolute;
+    inset: 0;
+    background:  hsl(178, 100%, 50%, 0.3); /* semi-transparent cyan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* initially hidden */
+    cursor: pointer;
+}
+
+.section-img:hover .section-img-overlay {
+    opacity: 1;
+}
+
+.section-img-overlay img {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Optional: style the icon */
+.img-overlay img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.section-content h1{
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-semibold);
+    margin-block-start: 1.5rem ;
+    margin-block-end: 1rem ;
+}
+
+.section-content h1:hover{
+    color: var(--cyan-400);
+    cursor: pointer;
+}
+
+.section-content-info{
+    padding-block-start: 1rem ;
+    padding-block-end: 1rem ;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid;
+    border-bottom-width: 0.09375rem ;
+    border-bottom-color: var(--blue-800);
+}
+
+.section-content-info-price{
+    color: var(--cyan-400);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-paragraph);
+}
+
+.section-content-author{
+    padding-block-start: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.section-content-author-img{
+    width: 2.1875rem;
+    height:  2.1875rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 0.09375rem solid var(--white);
+}
+
+.section-content-author-img img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-content-author span{
+    font-weight: var(--font-weight-regular);
+    margin-inline-start: 0.625rem;
+}
+
+.section-content-author a{
+    color: var(--white);
+}
+
+.section-content-author a:link{
+    text-decoration: none;
+}
+
+.section-content-author a:hover{
+    color: var(--cyan-400);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 48rem){
+    section{
+        max-width: 21.875rem;
+    }
+} 
+
